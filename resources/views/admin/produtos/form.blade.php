@@ -25,12 +25,18 @@
     </div>
 
     <div class="form-group col-sm-6">
-        <label for="usuarios_id" class="required">Usuários</label>
-        <select  class="form-control" name="usuarios_id[]" value="" multiple>
-            @foreach($users as $user)
-                <option {{ $produto->users()->find($user->id) != null ? 'selected' : "" }} value="{{ $user->id }}">{{ $user->name }}</option>
-            @endforeach
-        </select>
+        <label for="descricao" class="required">Descrição </label>
+        <input type="text" name="descricao" id="descricao" class="form-control" required autofocus value="{{ old('descricao',$produto->descricao) }}">
+    </div>
+
+    <div class="form-group col-sm-6">
+        <label for="status" class="required">Status</label>
+        <input type="text" name="status" id="descricao" class="form-control" required autofocus value="{{ old('status',$produto->status) }}">
+    </div>
+
+    <div class="form-group col-sm-6">
+        <label for="imagem" class="required">Imagem </label>
+        <input type="text" name="imagem" id="imagem" class="form-control" required autofocus value="{{ old('imagem',$produto->imagem) }}">
     </div>
 
 </div>

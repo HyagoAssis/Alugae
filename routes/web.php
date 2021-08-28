@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// use Exception;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +43,4 @@ Route::middleware('auth')->group(function () {
     Route::resource('/users', 'UserController');
     Route::resource('/categorias', 'CategoriasController');
     Route::resource('/produtos', 'ProdutosController');
-    
 });

@@ -15,5 +15,6 @@ $factory->define(Produtos::class, function (Faker $faker) {
         'nome' => $faker->word,
         'preco' => $faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 1000),
         'categoria_id' => $categorias_id[$random_key],
+        'status' => true
     ];
 });

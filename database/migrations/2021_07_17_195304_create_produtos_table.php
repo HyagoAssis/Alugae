@@ -19,6 +19,7 @@ class CreateProdutosTable extends Migration
             $table->string('descricao');
             $table->double('preco');
             $table->boolean('status');
+            $table->string('imagem');
 
             $table->unsignedBigInteger('categoria_id')->nullable();
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
