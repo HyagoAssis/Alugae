@@ -75,10 +75,12 @@
           <div class="content-block">
             <h1 class="produto-nome"><?= $produto->nome ?></h1>
             <p class="produto-preco">R$<?= $produto->preco ?> o dia</p>
-            <p class="produto-status"> Status: <?= $produto->status?></p>
-            <button class="wpp">
+            <p class="produto-status"> Status: <?= $produto->status ?></p>
+            <a href="https://api.whatsapp.com/send/?phone=55<?= $user->phone ?>">
+              <button class="wpp">
                 <p> Chame no Whatsapp </p>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>

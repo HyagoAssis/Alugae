@@ -19,6 +19,7 @@ class PagesController extends Controller
     {
                
         $produto = Produtos::where('id',$id)->firstOrFail();
+        $user = User::where('id',$produto->user_id)->firstOrFail();
 
         if (!$id)
         {
@@ -26,7 +27,8 @@ class PagesController extends Controller
         }
     
         return view ('public.produto',[
-            'produto' => $produto
+            'produto' => $produto,
+            'user' => $user
         ]);
     
     } 

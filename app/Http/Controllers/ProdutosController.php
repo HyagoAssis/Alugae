@@ -36,8 +36,7 @@ class ProdutosController extends Controller
     {
         $produto = new Produtos();
         $categorias = Categorias::all();
-        $users = User::all();
-        return view('admin.produtos.create', compact('produto', 'categorias', 'users'));
+        return view('admin.produtos.create', compact('produto', 'categorias'));
     }
 
     /**
@@ -48,9 +47,9 @@ class ProdutosController extends Controller
      */
     public function store(ProdutosRequest $request)
     {
-        $produto = Produtos::create($request->except('categoria_id', 'usuarios_id'));
+        $produto = Produtos::create($request->except('categoria_id'));
         $produto->categoria()->associate($request->categoria_id);
-        $produto->users()->sync($request->usuarios_id);
+        // $produto->users()->sync($request->usuarios_id);
         $produto->save();
 
         return redirect()->route('produtos.index')->with('sucess', true);
