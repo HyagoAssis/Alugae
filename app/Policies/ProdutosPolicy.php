@@ -41,7 +41,7 @@ class ProdutosPolicy
      */
     public function create(User $user)
     {
-        return $user->adm;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class ProdutosPolicy
      */
     public function update(User $user, Produtos $produtos)
     {
-        return $user->adm;
+        return true;
     }
 
     /**
@@ -65,7 +65,7 @@ class ProdutosPolicy
      */
     public function delete(User $user, Produtos $produtos)
     {
-        return $user->adm;
+        return true;
     }
 
     /**

@@ -68,7 +68,6 @@ class ProdutosController extends Controller
         $users = User::all();
         return view('admin.produtos.show', compact('produto', 'categorias', 'users'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *

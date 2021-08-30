@@ -1,9 +1,9 @@
 <aside class="main-sidebar elevation-4 sidebar-dark-primary"  style="overflow-x: hidden;">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="https://e7.pngegg.com/pngimages/275/572/png-clipart-back-and-forth-arrows-others-angle-company.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+    <a href="/" class="brand-link">
+      <img src="{{ asset('img/icon.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Aluga Aí</span>
+      <span class="brand-text font-weight-light">AlugaÊ</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -13,7 +13,7 @@
           <img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Usuário</a>
+          <a href="#" class="d-block">{{ Auth::user()->name ?? 'Usuário' }}</a>
         </div>
         <div class="info align-self-center">
           <form id="logout-form" method="post" action="{{ route('logout') }}">

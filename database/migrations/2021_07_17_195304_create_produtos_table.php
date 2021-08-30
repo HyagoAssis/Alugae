@@ -20,7 +20,8 @@ class CreateProdutosTable extends Migration
             $table->double('preco');
             $table->boolean('status');
             $table->string('imagem');
-
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('categoria_id')->nullable();
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
 

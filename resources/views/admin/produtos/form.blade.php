@@ -10,7 +10,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">R$</span>
             </div>
-            <input step="0.1" type="number" name="preco" id="preco" class="form-control" required autofocus value="{{ old('preco',$produto->preco) }}">
+            <input type="number" step=".01" name="preco" id="preco" class="form-control" required autofocus value="{{ old('preco',$produto->preco) }}">
         </div>
     </div>
 
@@ -35,8 +35,9 @@
     </div>
 
     <div class="form-group col-sm-6">
-        <label for="imagem" class="required">Imagem </label>
-        <input type="text" name="imagem" id="imagem" class="form-control" required autofocus value="{{ old('imagem',$produto->imagem) }}">
+        <label for="imagem" class="required">Imagem</label>
+        <input type="text" name="imagem" id="imagem" class="form-control" required autofocus value="{{ old('status',$produto->imagem) }}">
     </div>
+    <input type="hidden" name="user_id" id="user_id" class="form-control" required autofocus value="{{Auth::user()->id}}">
 
 </div>

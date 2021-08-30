@@ -12,6 +12,14 @@
         <input type="text" name="name" id="name" class="form-control" required autofocus value="{{ old('name',$user->name) }}">
     </div>
     <div class="form-group col-sm-6">
+        <label for="cpf" class="required">CPF </label>
+        <input type="text" name="cpf" id="cpf" class="form-control" required value="{{ old('cpf',$user->cpf) }}">
+    </div>
+    <div class="form-group col-sm-6">
+        <label for="phone" class="required">Telefone </label>
+        <input type="text" name="phone" id="cpf" class="form-control" required value="{{ old('phone',$user->phone) }}">
+    </div>
+    <div class="form-group col-sm-6">
         <label for="email" class="required">E-mail </label>
         <input type="email" name="email" id="email" class="form-control" required value="{{ old('email',$user->email) }}">
     </div>

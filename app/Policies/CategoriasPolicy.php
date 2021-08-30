@@ -18,7 +18,7 @@ class CategoriasPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->adm;
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class CategoriasPolicy
      */
     public function view(User $user, Categorias $categorias)
     {
-        return $user->adm;
+        return true;
     }
 
     /**

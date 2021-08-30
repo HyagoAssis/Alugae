@@ -12,8 +12,22 @@ class PagesController extends Controller
 {
     public function index()
     {
-        //return view('public.index');
         $produtos = Produtos::all();
         return view('public.index', compact('produtos'));
     }
+    public function show($id)
+    {
+               
+        $produto = Produtos::where('id',$id)->firstOrFail();
+
+        if (!$id)
+        {
+            abort(404);
+        }
+    
+        return view ('public.produto',[
+            'produto' => $produto
+        ]);
+    
+    } 
 }
