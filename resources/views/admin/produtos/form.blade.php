@@ -33,7 +33,7 @@
         <label for="status" class="required">Status</label>
         <select class="form-control " name="status" value="">
             <option {{ $produto->status == 1 ? "selected" : ""}} value="{{1}}"">Alugado</option>
-            <option {{ $produto->status == 0 ? "selected" : ""}} value="{{0}}">Disponível</option>
+            <option {{ $produto->status == 0 ? "selected" : ""}} value=" {{0}}">Disponível</option>
         </select>
     </div>
 

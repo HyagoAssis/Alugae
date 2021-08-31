@@ -13,17 +13,33 @@ class UserSeeder extends Seeder
     public function run()
     {
         // factory(App\User::class, 10)->create();
-        User::updateOrCreate([
-            'email' => 'admin@admin.com.br',
-            'password' => bcrypt('123456'),
-            'adm' => true,
-            'cpf' => '00000000',
-        ], [
-            'name' => 'admin',
-            'email' => 'admin@admin.com.br',
-            'password' => bcrypt('123456'),
-            'adm' => true,
-            'cpf' => '00000000',            
-        ]);
+        User::updateOrCreate(
+            [
+                'name' => 'admin',
+                'email' => 'admin@admin.com.br',
+                'password' => bcrypt('123456'),
+                'adm' => true,
+                'cpf' => '00000000',
+            ],
+        );
+        User::updateOrCreate(
+            [
+                'name' => 'Ana Maria',
+                'email' => 'ana@admin.com.br',
+                'password' => bcrypt('123456'),
+                'adm' => false,
+                'cpf' => '00000000',
+            ],
+        );
+        User::updateOrCreate(
+            [
+                'name' => 'Fábio Júnior',
+                'email' => 'fabio@admin.com.br',
+                'password' => bcrypt('123456'),
+                'phone' => '32956528546',
+                'adm' => false,
+                'cpf' => '00000000',
+            ],
+        );
     }
 }
