@@ -16,10 +16,10 @@
 
     <div class="form-group col-sm-6">
         <label for="categoria" class="required">Categorias</label>
-        <select  class="form-control " name="categoria_id" value="">
+        <select class="form-control " name="categoria_id" value="">
             <option value="">Nennum</option>
             @foreach($categorias as $categoria)
-                <option {{ $produto->categoria_id == $categoria->id ? "selected" : "" }} value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+            <option {{ $produto->categoria_id == $categoria->id ? "selected" : "" }} value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
             @endforeach
         </select>
     </div>
@@ -31,7 +31,10 @@
 
     <div class="form-group col-sm-6">
         <label for="status" class="required">Status</label>
-        <input type="text" name="status" id="descricao" class="form-control" required autofocus value="{{ old('status',$produto->status) }}">
+        <select class="form-control " name="status" value="">
+            <option {{ $produto->status == 1 ? "selected" : ""}} value="{{1}}"">Alugado</option>
+            <option {{ $produto->status == 0 ? "selected" : ""}} value="{{0}}">Disponível</option>
+        </select>
     </div>
 
     <div class="form-group col-sm-6">

@@ -41,33 +41,32 @@
 
 <body style="background-color: #b2b2b2">
 
-	<div class="container" style="padding-top: 5%; padding-bottom: 5%">
-
-		<div class="container d-flex align-middle">
-			<img src="{{ asset('img/icon.png') }}" style="float: left">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-lg menu">
-				<b><a style="color: #345f8d;font-size: 30px" class="navbar-brand" href="/">alugaê</a></b>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 15%;">
-					<ul class="navbar-nav">
-						<li class="nav-item" style="margin-right: 25%">
-							<a style="color: #345f8d;" class="nav-link" href="/">Sobre</a>
-						</li>
-						<li class="nav-item" style="margin-right: 25%">
-							<a style="color: #345f8d;" class="nav-link" href="/">Apoiar</a>
-						</li>
-						<li class="nav-item" style="margin-right: 25%">
-							<a style="color: #345f8d;" class="nav-link" href="/dashboard">Anunciar</a>
-						</li>
-						<li class="nav-item">
-							<a style="color: #345f8d;" class="nav-link" href="/dashboard">Entrar</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+<div class="container" style="padding-top: 5%; padding-bottom: 5%">
+    <div class="container d-flex align-middle">
+      <img src="{{ asset('img/icon.png') }}" style="float: left">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-lg menu">
+        <b><a style="color: #345f8d;font-size: 30px" class="navbar-brand" href="/">alugaê</a></b>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 15%;">
+          <ul class="navbar-nav">
+            <li class="nav-item" style="margin-right: 25%">
+              <a style="color: #345f8d;" class="nav-link" href="/">Sobre</a>
+            </li>
+            <li class="nav-item" style="margin-right: 25%">
+              <a style="color: #345f8d;" class="nav-link" href="/">Apoiar</a>
+            </li>
+            <li class="nav-item" style="margin-right: 25%">
+              <a style="color: #345f8d;" class="nav-link" href="/dashboard">Anunciar</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #345f8d;" class="nav-link" href="/dashboard">Entrar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 		<div class="container rounded-lg" style="padding: 5%;background-color: white; margin-top: 5%">
 
 			<!-- <ul class="nav justify-content-center rounded-lg categorias" style="background-color: gray;">

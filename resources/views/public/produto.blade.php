@@ -40,7 +40,6 @@
 
 <body style="background-color: #b2b2b2">
   <div class="container" style="padding-top: 5%; padding-bottom: 5%">
-
     <div class="container d-flex align-middle">
       <img src="{{ asset('img/icon.png') }}" style="float: left">
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-lg menu">
@@ -75,7 +74,7 @@
           <div class="content-block">
             <h1 class="produto-nome"><?= $produto->nome ?></h1>
             <p class="produto-preco">R$<?= $produto->preco ?> o dia</p>
-            <p class="produto-status"> Status: <?= $produto->status ?></p>
+            <p class="produto-status"> Status: <?= $produto->status == 0 ? "Disponível" : "Alugado" ?></p>
             <a href="https://api.whatsapp.com/send/?phone=55<?= $user->phone ?>">
               <button class="wpp">
                 <p> Chame no Whatsapp </p>
